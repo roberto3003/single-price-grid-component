@@ -9,7 +9,7 @@
   --accent: orangered;
   --grey: hsl(227, 10%, 46%);
   --mbe: 2em;
-  --padding: 1em;
+  --padding: 2em;
   --gap: 2em;
   --shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.5);
   --radius: 1em;
@@ -87,13 +87,23 @@ section {
 
 
 aside {
-background-color: aquamarine;
+  background-color: aquamarine;
 }
 
-button {
+a {
+  cursor:pointer;
   background-color: var(--accent);
-  color: var(--text-light);
+  text-decoration: none;
+  padding: calc(var(--padding)/4) calc(var(--padding)*2); 
+  border-radius: calc(var(--radius)/2);
+  overflow: hidden;
 }
+
+a:hover {
+  --shadow: 0 0.5vw 2vw  0 rgba(0,0,0,0.5);
+}
+
+
 
 .price {
   display: inline-block;
