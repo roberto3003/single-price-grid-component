@@ -7,19 +7,17 @@
   --neutral: lightseagreen;
   --light: azure;
   --accent: orangered;
-  --grey: hsl(227, 10%, 46%);
-  --mbe: 2em;
   --padding: 2em;
   --gap: 2em;
+  --mbe: 2em;
   --shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.5);
+  --shadow-deep: 0 0.5vw 2vw  0 rgba(0,0,0,0.5);
   --radius: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
-input,
 button,
-textarea,
-select {
+{
   font: inherit;
 }
 
@@ -83,6 +81,7 @@ main h2 {
 section {
   background-color: darkcyan;
   color: var(--text-light);
+  min-height: 28em;
 }
 
 
@@ -91,16 +90,17 @@ aside {
 }
 
 a {
+  position: absolute;
   cursor:pointer;
   background-color: var(--accent);
   text-decoration: none;
   padding: calc(var(--padding)/4) calc(var(--padding)*2); 
   border-radius: calc(var(--radius)/2);
-  overflow: hidden;
+  margin-block-start: var(--mbe);
 }
 
 a:hover {
-  --shadow: 0 0.5vw 2vw  0 rgba(0,0,0,0.5);
+  shadow: var(--shadow-deep);
 }
 
 
